@@ -25,7 +25,7 @@ public class FocusActivity {
 	private AndroidElement tab_three;
 	
 	//定位关注按钮
-	@FindBy(xpath="//html/body/main/div/div[1]/section/aside[1]/span[2]/a/b[2]")
+	@FindBy(xpath="//main/div/div[1]/section/aside[1]/span[2]/a/b[2]")
 	private AndroidElement focus_btn;
 	
 	//定位取消关注弹窗上的“确定”按钮
@@ -37,8 +37,16 @@ public class FocusActivity {
 	private AndroidElement cancel_btn;
 	
 	//点赞
-	@FindBy(xpath="//html/body/main/div/div[1]/section/aside[1]/span[1]/a/div")
+	@FindBy(xpath="//main/div/div[1]/section/aside[1]/span[1]/a/div")
 	private AndroidElement dz_btn;
+	
+	//右上角分享按钮
+	@AndroidFindBy(id="com.sina.news:id/rl")
+	private AndroidElement share_btn;
+	
+	//分享浮层上的“关闭”按钮
+	@AndroidFindBy(id="com.sina.news:id/rh")
+	private AndroidElement close_btn;
 	
 	//定位返回按钮
 	@AndroidFindBy(id="com.sina.news:id/ri")
@@ -80,6 +88,18 @@ public class FocusActivity {
 	public void clickDz() {
 		driver.context("WEBVIEW_com.sina.news");
 		dz_btn.click();
+	}
+	
+	//点击右上角分享按钮
+	public void clickShare() {
+		driver.context("NATIVE_APP");
+		share_btn.click();
+	}
+	
+	//点击分享弹层上的“关闭”按钮
+	public void clickClose() {
+		driver.context("NATIVE_APP");
+		close_btn.click();
 	}
 	
 	//点击返回按钮
