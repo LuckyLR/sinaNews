@@ -36,6 +36,10 @@ public class FocusActivity {
 	@AndroidFindBy(id="com.sina.news:id/m3")
 	private AndroidElement cancel_btn;
 	
+	//点赞
+	@FindBy(xpath="//html/body/main/div/div[1]/section/aside[1]/span[1]/a/div")
+	private AndroidElement dz_btn;
+	
 	//定位返回按钮
 	@AndroidFindBy(id="com.sina.news:id/ri")
 	private AndroidElement return_btn;
@@ -70,6 +74,12 @@ public class FocusActivity {
 		    //点击弹窗上的确定按钮
 			confirm_btn.click();				
 		}
+	}
+	
+	//点击点赞按钮
+	public void clickDz() {
+		driver.context("WEBVIEW_com.sina.news");
+		dz_btn.click();
 	}
 	
 	//点击返回按钮
