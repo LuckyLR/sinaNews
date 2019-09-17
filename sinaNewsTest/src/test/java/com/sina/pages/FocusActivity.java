@@ -9,7 +9,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 /*
- * 使用页面对象的标准模型来封装
+ * 使用页面对象的标准模型来封装,
  * 这样把 元素以及元素操作方法（即逻辑行为）抽象出来。
  */
 public class FocusActivity {
