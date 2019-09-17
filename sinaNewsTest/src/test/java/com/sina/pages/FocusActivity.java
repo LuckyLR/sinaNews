@@ -17,11 +17,11 @@ public class FocusActivity {
 	private AndroidDriver<AndroidElement> driver;
 	
 	//定位体育频道
-	@FindBy(xpath="//*[@resource-id='com.sina.news:id/ach'][@text='体育']")
+	@FindBy(xpath="//*[@resource-id='com.sina.news:id/acs'][@text='体育']")
 	private AndroidElement channel_sport;
 	
 	//定位第三个tab
-	@FindBy(xpath="//*[@resource-id='com.sina.news:id/aip']/android.widget.LinearLayout[3]")
+	@FindBy(xpath="//*[@resource-id='com.sina.news:id/aiy']/android.widget.LinearLayout[3]")
 	private AndroidElement tab_three;
 	
 	//定位关注按钮
@@ -29,11 +29,11 @@ public class FocusActivity {
 	private AndroidElement focus_btn;
 	
 	//定位取消关注弹窗上的“确定”按钮
-	@AndroidFindBy(id="com.sina.news:id/m1")
+	@AndroidFindBy(id="com.sina.news:id/lz")
 	private AndroidElement confirm_btn;
 	
 	//定位取消关注弹窗上的“取消”按钮
-	@AndroidFindBy(id="com.sina.news:id/m3")
+	@AndroidFindBy(id="com.sina.news:id/m1")
 	private AndroidElement cancel_btn;
 	
 	//点赞
@@ -41,15 +41,15 @@ public class FocusActivity {
 	private AndroidElement dz_btn;
 	
 	//右上角分享按钮
-	@AndroidFindBy(id="com.sina.news:id/rl")
+	@AndroidFindBy(id="com.sina.news:id/rk")
 	private AndroidElement share_btn;
 	
 	//分享浮层上的“关闭”按钮
-	@AndroidFindBy(id="com.sina.news:id/rh")
+	@AndroidFindBy(id="com.sina.news:id/rg")
 	private AndroidElement close_btn;
 	
 	//定位返回按钮
-	@AndroidFindBy(id="com.sina.news:id/ri")
+	@AndroidFindBy(id="com.sina.news:id/rh")
 	private AndroidElement return_btn;
 	
 	public FocusActivity(AndroidDriver<AndroidElement> driver) {
